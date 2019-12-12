@@ -11,22 +11,22 @@ class Bottles {
                 out.print(beers + container(beers) + " of beer on the wall,");
                 out.println(beers + container(beers) + " of beer,");
                 out.print(actionAfterTakeBeer(beers));
-                out.println("99 bottles of beer on the wall.\r\n");
+                out.println(beersLeft(beers) + container(beers) + " of beer on the wall.\r\n");
             } else if (beers == 1) {
                 out.print(beers + container(beers) + " of beer on the wall,");
                 out.println(beers + container(beers) + " of beer,");
                 out.print(actionAfterTakeBeer(beers));
-                out.println(beers - 1 + container(beers - 1) + " of beer on the wall.\r\n");
+                out.println(beersLeft(beers) + container(beersLeft(beers)) + " of beer on the wall.\r\n");
             } else if (beers == 2) {
                 out.print(beers + container(beers) + " of beer on the wall,");
                 out.println(beers + container(beers) + " of beer,");
                 out.print(actionAfterTakeBeer(beers));
-                out.println(beers - 1 + container(beers - 1) + " of beer on the wall.\r\n");
+                out.println(beersLeft(beers) + container(beersLeft(beers)) + " of beer on the wall.\r\n");
             } else {
-                out.print(beers + container(beers)+ " of beer on the wall,");
+                out.print(beers + container(beers) + " of beer on the wall,");
                 out.println(beers + container(beers) + " of beer,");
                 out.print(actionAfterTakeBeer(beers));
-                out.println(beers - 1 + container(beers -1) + " of beer on the wall.\r\n");
+                out.println(beersLeft(beers) + container(beersLeft(beers)) + " of beer on the wall.\r\n");
             }
         }
     }
@@ -45,5 +45,9 @@ class Bottles {
         } else {
             return " bottles";
         }
+    }
+
+    private static int beersLeft(int beers) {
+        return beers == 0 ? 99 : beers - 1;
     }
 }
