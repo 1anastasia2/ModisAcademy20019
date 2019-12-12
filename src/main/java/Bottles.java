@@ -25,7 +25,11 @@ class Bottles
                 out.print("Take one down, pass it around,");
             }
 
-            s = (beers-1 == 1)?"":"s";
+           if(beers-1 == 1) {
+               s = "";
+           } else {
+               s = "s";
+           }
             out.println(beers-1 + " bottle" + s + " of beer on the wall.\r\n");
         }
     }
