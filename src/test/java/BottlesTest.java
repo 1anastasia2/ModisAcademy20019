@@ -12,12 +12,12 @@ public class BottlesTest {
     public void testSong() throws IOException {
         final ByteArrayOutputStream stream = new ByteArrayOutputStream();
         Bottles.writeLyrics(
-               new PrintStream(
-                      stream));
+                new PrintStream(
+                        stream));
 
-       final String actual = new String(stream.toByteArray());
-       final String expected = new String(Files.readAllBytes(Paths.get("src/main/resources/test.txt")));
+        final String actual = new String(stream.toByteArray());
+        final String expected = new String(Files.readAllBytes(Paths.get("src/main/resources/test.txt")));
 
-       Assert.assertEquals(expected,actual);
-  }
+        Assert.assertEquals(expected, actual);
+    }
 }
