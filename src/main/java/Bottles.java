@@ -7,7 +7,7 @@ class Bottles
         writeLyrics(System.out);
     }
 
-    private static void writeLyrics(PrintStream out) {
+    public static void writeLyrics(PrintStream out) {
         String s = "s";
         for (int beers=99; beers>-1;beers--)
         {
